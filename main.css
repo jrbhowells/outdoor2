@@ -1,0 +1,455 @@
+:root {
+	--off-white: rgb(252, 249, 247);
+	--the-dark: rgb(33, 15, 5);
+	--the-accent: rgb(266, 113, 48);
+	--the-grey: rgb(250, 241, 237);
+}
+
+/* 1. Generals */
+
+body {
+	background-color: var(--off-white);
+	font-family: Trebuchet MS, sans-serif;
+	text-align: justify;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+	font-family: Arial, sans-serif;
+}
+
+main h1, h2 {
+	color: var(--the-accent);
+}
+
+header h1 {
+	position: absolute;
+	top: 20vw;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	font-size: 5vw;
+}
+
+header h3 {
+	display: inline-block;
+	font-size: 2vw;
+    margin: 0.5vw;
+}
+
+.button {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	height: 30px;
+	line-height: 30px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	border: 2px solid var(--the-dark);
+	border-radius: 17px;
+
+	color: var(--the-dark);
+	font-family: Didot, serif;
+	font-size: large;
+}
+
+.button:hover {
+	border: 2px solid var(--off-white);
+	color: var(--off-white);
+	background-color: var(--the-accent);
+	cursor: pointer;
+}
+
+/* 1.1 Tiles */
+
+tile {
+	border-radius: 0.4vw;
+	/* background-color: var(--the-dark); */
+	width: 23%; /* Half of main area, including all padding */
+	display: inline-block;
+	margin: 2%;
+
+	cursor: pointer;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+}
+
+tile img {
+	position: relative;
+	border-radius: 0.4vw;
+	width: 100%;
+}
+
+tile-txt {
+	visibility: hidden;
+
+	position: absolute;
+	width: 100%;
+	max-width: 23vw;
+	height: 23vw;
+	z-index: 2;
+	color: var(--off-white);
+	text-align: center;
+	font-size: 1.1vw;
+}
+
+.tile-head {
+	font-family: Arial, sans-serif;
+	font-size: 2em;
+	padding: 5%;
+}
+
+tile p {
+	padding: 5%;
+	text-align: justify;
+}
+
+tile:hover {
+	-webkit-transform: scale(1.02);
+	-ms-transform: scale(1.02);
+	transform: scale(1.02);
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+}
+
+tile:hover img {
+	filter: brightness(50%);
+	-webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);
+}
+
+tile:hover tile-txt {
+	visibility: visible;
+}
+
+/* 2. Header */
+
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--the-dark);
+	color: var(--the-accent);
+	/* border-bottom: 1px solid var(--the-accent) */
+}
+
+.logo {
+	width: 15%;
+	position: absolute;
+	top: 3vh;
+	left: 5vw;
+}
+
+
+.head-img {
+	width: 100%;
+	animation-name: fade-head-grow;
+    animation-duration: 1s;
+}
+
+.head-img-narrow {
+	width: 100%;
+}
+
+@keyframes fade-head-grow {
+    0% {height: 13.471vw; opacity: 0;}
+    20% {height: 42.139vw; opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fade-head-shrink {
+    0% {height: 42.139vw; opacity: 0;}
+    20% {height: 13.471vw; opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.navbar {
+	/* height: 5vw; */
+    /* padding-top: 0; */
+	text-align: center;
+}
+
+a {
+	color: var(--the-accent);
+    text-decoration: none;
+}
+
+a:hover {
+	color: var(--off-white);
+	cursor: pointer;
+}
+
+.current {
+	color: var(--the-green);
+	cursor: pointer;
+}
+
+@keyframes fade-head {
+    0% {opacity: 0;}
+    20% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/* 3. Main */
+
+main {
+	left: 0;
+	width: 95%;
+	padding: 2.5%;
+    padding-top: 0.5%;
+	display: block;
+	overflow: auto;
+}
+ /* 3.1. Projects page */
+
+ left {
+	position: relative;
+	float: left;
+	width: 48.75%;
+	min-height: 60vh;
+}
+
+.cbox {
+	height: 50px;
+	border: 1px solid var(--the-dark);
+	border-radius: 5px;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	overflow: hidden;
+}
+
+.cbox h2, h4 {
+	line-height: 0px;
+}
+
+.plus, .minus {
+	text-align: right;
+	line-height: 0px;
+}
+
+.plus:hover, .minus:hover {
+	color: var(--the-dark);
+	cursor: pointer;
+}
+
+.minus {
+	display: none;
+}
+
+hr {
+	border: none;
+	border-top: 0.5px solid var(--the-dark);
+}
+
+.cbox div {
+	border-left: 2px solid var(--the-dark);
+	padding-left: 2%;
+	height: 24px;
+}
+
+.cbox div:hover {
+	border-left: 4px solid var(--the-accent);
+	color: var(--the-accent);
+	padding-left: calc(2% - 2px);
+	cursor: pointer;
+}
+
+.cbox h3 {
+	display:inline;
+	line-height: 24px;
+}
+
+.ooa {
+	color: gray;
+}
+
+.cbox p {
+	vertical-align: top;
+	margin: 0;
+}
+
+right {
+	position: relative;
+	float: right;
+	width: 48.75%;
+	text-align: center;
+}
+
+right .button {
+	position: relative;
+	left: 0;
+	transform: translate(0,0);
+}
+
+.focus {
+	border: 1px solid var(--the-dark);
+	border-radius: 5px;
+	padding: 2.5%;
+	padding-top: 0%;
+	display: none;
+}
+
+.focus img {
+	width: 100%;
+}
+
+/* 3.2. Popups */
+
+popup {
+	display: none;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+popup:target {
+	display: block;
+}
+
+popup-box {
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	right: 5%;
+	background-color: var(--off-white);
+	border-radius: 10px;
+	padding: 30px;
+	overflow-x: scroll;
+	text-align: center;
+}
+
+.back {
+	margin-bottom: 0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: var(--off-white);
+}
+
+.back:hover {
+	cursor: pointer;
+}
+
+popup-box img {
+	width: 100%;
+}
+
+popup-box div img {
+	width: calc(100% + 60px);
+	margin-left:-30px;
+}
+
+popup-box div h2 {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+}
+
+popup-box h3 {
+	color: var(--the-accent);
+}
+
+popup-box div p {
+	position: absolute;
+	left: 0;
+	transform: translate(0, -68px);
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	color: var(--off-white);
+}
+
+popup-box .button {
+	left: 0;
+	transform: translate(0, 0);
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+/* 3.3. Portfolio */
+
+.pill {
+	display: inline-block;
+
+	height: 20px;
+	line-height: 20px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	margin-top: -10px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+
+	border: 2px solid var(--the-dark);
+	border-radius: 12px;
+
+	color: var(--the-dark);
+	font-family: Didot, serif;
+	font-size: medium;
+}
+
+/* 4. Footer */
+
+footer {
+	position: relative;
+	background-color: var(--off-white);
+	color: var(--the-accent);
+	font-family: Arial, sans-serif;
+	height: 6vw;
+	line-height: 6vw;
+	padding-left: 5vw;
+	border-top: 1px solid var(--the-accent)
+}
+
+/* 5. Events */
+
+event {
+	display: inline-block;
+	width: 25vw;
+	padding: 2%;
+	margin: 1%;
+	background-color: var(--the-grey);
+	border-radius: 5px;
+}
+
+event .name {
+	float: left;
+	font-family: Arial, sans-serif;
+	color: var(--the-accent);
+	font-size: x-large;
+	width: 60%;
+}
+
+event .dnt {
+	float: right;
+	padding: 2%;
+	border-radius: 5px;
+	width: 35%;
+	background-color: var(--the-accent);
+}
+
+event .date {
+	font-size: large;
+}
+
+event .time {
+	font-size: small;
+}
+
+event .detail {
+	text-align: justify;
+}

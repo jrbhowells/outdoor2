@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <title>Outdoor Club</title>
+        <link rel="shortcut icon" href="img/logo.png">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header>
+            <img class="head-img" src="img/headers/boulder.JPG">
+            <img class="logo" src="img/logo.png">
+            <a href="index.html" class="site-title"><h1>IC OUTDOOR CLUB</h1></a>
+            <div class="navbar">
+                <a href="about.html"><h3>About Us</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="committee.html"><h3>Meet the Committee</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="events.html"><h3>What's On</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="trips.html"><h3>Trip Reports</h3></a>
+            </div>
+        </header>
+
+        <main style="text-align: center;">
+            <h1>What's On</h1>
+            <event>
+                <div style="overflow: hidden; margin-bottom: 4%;">
+                    <div class="name">Ethos Session</div>
+                    <div class="dnt">
+                        <div class="date">Every Thursday</div>
+                        <div class="time">6-8pm</div>
+                    </div>
+                </div>
+                <div class="detail">Come along to Ethos every Thursday of term-time for super-cheap top rope, lead climbing and bouldering. £2 for Club members, £4 for non-members.</div>
+            </event>
+            <event>
+                <div style="overflow: hidden; margin-bottom: 4%;">
+                    <div class="name">RavensWall Session</div>
+                    <div class="dnt">
+                        <div class="date">Alternate Mondays</div>
+                        <div class="time">6-8pm</div>
+                    </div>
+                </div>
+                <div class="detail">We get discounted entry to RavensWall (and other LCC centres) for £8.50 - £7 off full price with shoe hire. The deal applies at all off-peak times but we go as a Club every other week.</div>
+            </event>
+            <event>
+                <div style="overflow: hidden; margin-bottom: 4%;">
+                    <div class="name">Westway Session</div>
+                    <div class="dnt">
+                        <div class="date">Alternate Mondays</div>
+                        <div class="time">6-8pm</div>
+                    </div>
+            </div>
+                <div class="detail">When we don't go to RavensWall, we go to Westway on Mondays. With over 150 rope lines, it is a great place to get some proper top-rope and lead climbing done, with some bouldering too.</div>
+            </event>
+            <event>
+                <div style="overflow: hidden; margin-bottom: 4%;">
+                    <div class="name">Snowdonia Trip</div>
+                    <div class="dnt">
+                        <div class="date">20-22 Jan</div>
+                        <div class="time">Meet 4:30pm</div>
+                    </div>
+            </div>
+                <div class="detail">We're heading back to Snowdonia for the first trip this term. Join us for lots of climbing and hiking, and possibly som,e trail running too.</div>
+            </event>
+        </main>
+
+        <footer>
+            <img src="img/logo-blue.png" style="height: 2vw; padding: 2vw; float: left;">
+            © Outdoor Club 2022. Coded by J Howells, hosted by GitHub.
+        </footer>
+
+        <script>
+            Array.prototype.random = function () {
+                return this[Math.floor((Math.random()*this.length))];
+            }
+
+            const header = document.getElementsByClassName('head-img')[0];
+            const images =  ['boulder.JPG', 'boulder-2.JPG'];
+
+            header.src = 'img/headers/' + images.random();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <title>Outdoor Club</title>
+        <link rel="shortcut icon" href="img/logo.png">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header>
+            <img class="head-img" src="img/headers/boulder.JPG">
+            <img class="logo" src="img/logo.png">
+            <a href="index.html" class="site-title"><h1>IC OUTDOOR CLUB</h1></a>
+            <div class="navbar">
+                <a href="about.html"><h3>About Us</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="committee.html"><h3>Meet the Committee</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="events.html"><h3>What's On</h3></a>
+                <h3>&nbsp; &nbsp; &bull; &nbsp; &nbsp;</h3>
+                <a href="trips.html"><h3>Trip Reports</h3></a>
+            </div>
+        </header>
+
+        <main style="text-align: center;">
+            <h1>About</h1>
+            <p>I am currently in my third year studying Design Engineering at Imperial College London.</p>
+            <p >I am also a Student Expert at my department's student-run workshop and makerspace, which means I help to maintain a 3D printer farm, laser cutter and other pieces of equipment, and teach others how to use them.
+            I'm on the committee of Imperial's Outdoor society, and have also been involved in the technical & backstage side of the Drama Society.</p>
+            <p>You can see much of my portfolio on this website, but for a PDF copy or for my CV, please contact me on james.howells20@imperial.ac.uk</p>
+        </main>
+
+        <footer>
+            <img src="img/logo-blue.png" style="height: 2vw; padding: 2vw; float: left;">
+            © Outdoor Club 2022. Coded by J Howells, hosted by GitHub.
+        </footer>
+
+        <script>
+            Array.prototype.random = function () {
+                return this[Math.floor((Math.random()*this.length))];
+            }
+
+            const header = document.getElementsByClassName('head-img')[0];
+            const images =  ['boulder.JPG', 'boulder-2.JPG'];
+
+            header.src = 'img/headers/' + images.random();
+        </script>
+    </body>
+</html>
