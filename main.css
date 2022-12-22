@@ -174,12 +174,12 @@ header {
 	text-align: center;
 }
 
-a {
+header a {
 	color: var(--the-accent);
     text-decoration: none;
 }
 
-a:hover {
+header a:hover {
 	color: var(--off-white);
 	cursor: pointer;
 }
@@ -205,6 +205,16 @@ main {
 	display: block;
 	overflow: auto;
 }
+
+a {
+	color: var(--the-accent);
+}
+
+a:hover {
+	color: var(--the-dark);
+	cursor: pointer;
+}
+
  /* 3.1. Projects page */
 
  left {
